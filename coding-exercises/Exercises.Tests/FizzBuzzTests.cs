@@ -34,5 +34,15 @@ namespace Exercises.Tests
             Assert.AreEqual("9 1", highAndLow.HighLow("3 1 5 9 7"));
             Assert.AreEqual("9782 -5", highAndLow.HighLow("2343 4561 9782 12 3456 -5"));
         }
+        [TestMethod]
+        public void RemoveNoise()
+        {
+
+            //Arrange
+            RemoveNoise removeNoise = new RemoveNoise();
+
+            //Assert
+            Assert.AreEqual("hello world", removeNoise.RemovNoise("h%e&·%$·llo w&%or&$l·$%d"));
+        }
     }
 }
