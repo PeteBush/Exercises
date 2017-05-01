@@ -44,5 +44,16 @@ namespace Exercises.Tests
             //Assert
             Assert.AreEqual("hello world", removeNoise.RemovNoise("h%e&·%$·llo w&%or&$l·$%d"));
         }
+        [TestMethod]
+        public void MostFrequentDigitSum()
+        {
+
+            //Arrange
+            MostFrequentDigit mostFrequentDigit = new MostFrequentDigit();
+
+            //Assert.AreEqual(9, mostFrequentDigit.MostFrequentDigitSum(88));
+            //Assert.AreEqual(8, mostFrequentDigit.MostFrequentDigitSum(8));
+            Assert.AreEqual(1, mostFrequentDigit.MostFrequentDigitSum(1));
+        }
     }
 }
