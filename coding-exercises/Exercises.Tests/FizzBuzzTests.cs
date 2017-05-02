@@ -67,5 +67,17 @@ namespace Exercises.Tests
             Assert.AreEqual(true, driverLicense.GetDriversLicense(16, 50, true, true));
             Assert.AreEqual(true, driverLicense.GetDriversLicense(18, 0, true, true));
         }
+        [TestMethod]
+        public void LateArrival()
+        {
+            //Arrange
+            Arrival arrival = new Arrival();
+
+            //Asswert
+            Assert.AreEqual(true, arrival.LateArrival(20, 10, 60));
+            Assert.AreEqual(true, arrival.LateArrival(20, 20, 60));
+            Assert.AreEqual(false, arrival.LateArrival(40, 60, 50));
+            Assert.AreEqual(true, arrival.LateArrival(30, 5, 10));
+        }
     }
 }
