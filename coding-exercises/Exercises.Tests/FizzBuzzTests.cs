@@ -51,9 +51,21 @@ namespace Exercises.Tests
             //Arrange
             MostFrequentDigit mostFrequentDigit = new MostFrequentDigit();
 
-            //Assert.AreEqual(9, mostFrequentDigit.MostFrequentDigitSum(88));
-            //Assert.AreEqual(8, mostFrequentDigit.MostFrequentDigitSum(8));
+            Assert.AreEqual(9, mostFrequentDigit.MostFrequentDigitSum(88));
+            Assert.AreEqual(8, mostFrequentDigit.MostFrequentDigitSum(8));
             Assert.AreEqual(1, mostFrequentDigit.MostFrequentDigitSum(1));
+        }
+        [TestMethod]
+        public void GetDriverLicense()
+        {
+            //Arrange
+            DriversLicense driverLicense = new DriversLicense();
+
+            //Assert
+            Assert.AreEqual(false, driverLicense.GetDriversLicense(16, 20, false, true));
+            Assert.AreEqual(false, driverLicense.GetDriversLicense(16, 50, false, false));
+            Assert.AreEqual(true, driverLicense.GetDriversLicense(16, 50, true, true));
+            Assert.AreEqual(true, driverLicense.GetDriversLicense(18, 0, true, true));
         }
     }
 }
