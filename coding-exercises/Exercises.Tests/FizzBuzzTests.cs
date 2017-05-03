@@ -79,5 +79,17 @@ namespace Exercises.Tests
             Assert.AreEqual(false, arrival.LateArrival(40, 60, 50));
             Assert.AreEqual(true, arrival.LateArrival(30, 5, 10));
         }
+        [TestMethod]
+        public void NeedsECheck()
+        {
+            //Arrange
+            ECheck eCheck = new ECheck();
+
+            //Assert
+            Assert.AreEqual(true, eCheck.NeedsECheck(2017, 2011));
+            Assert.AreEqual(true, eCheck.NeedsECheck(2016, 2004));
+            Assert.AreEqual(false, eCheck.NeedsECheck(2011, 2012));
+            Assert.AreEqual(false, eCheck.NeedsECheck(2011, 1992));
+        }
     }
 }
