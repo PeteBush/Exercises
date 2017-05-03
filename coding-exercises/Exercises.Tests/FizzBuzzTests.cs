@@ -91,5 +91,17 @@ namespace Exercises.Tests
             Assert.AreEqual(false, eCheck.NeedsECheck(2011, 2012));
             Assert.AreEqual(false, eCheck.NeedsECheck(2011, 1992));
         }
+
+        [TestMethod]
+        public void HighestOdd()
+        {
+            //Arrange
+            HighOdd highOdd = new HighOdd();
+
+            //Assert
+            Assert.AreEqual(0, highOdd.HighestOdd(new int[] { }));
+            Assert.AreEqual(0, highOdd.HighestOdd(new int[] {2, 10}));
+            Assert.AreEqual(7, highOdd.HighestOdd(new int[] {3,7,8}));
+        }
     }
 }

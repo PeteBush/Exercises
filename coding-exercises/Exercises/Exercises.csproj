@@ -45,6 +45,7 @@
     <Compile Include="ECheck.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="HighAndLow.cs" />
+    <Compile Include="HighOdd.cs" />
     <Compile Include="MostFrequentDigit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveNoise.cs" />
