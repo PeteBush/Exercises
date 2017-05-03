@@ -103,5 +103,22 @@ namespace Exercises.Tests
             Assert.AreEqual(0, highOdd.HighestOdd(new int[] {2, 10}));
             Assert.AreEqual(7, highOdd.HighestOdd(new int[] {3,7,8}));
         }
+        [TestMethod]
+        public void SecondHighest()
+        {
+            //Arrange
+            SecHighest secHighest = new SecHighest();
+
+            //Assert
+            Assert.AreEqual(0, secHighest.SecondHighest(new int[] { }));
+            Assert.AreEqual(1, secHighest.SecondHighest(new int[] { 1 }));
+            Assert.AreEqual(3, secHighest.SecondHighest(new int[] { 1, 3, 5}));
+            Assert.AreEqual(3, secHighest.SecondHighest(new int[] { 1, 3, 3, 3 }));
+            Assert.AreEqual(13, secHighest.SecondHighest(new int[] { 1, 4, 6, 8, 23, 13 }));
+            Assert.AreEqual(99, secHighest.SecondHighest(new int[] { 99, 43, 72, 109, 54, 21, -74 }));
+            Assert.AreEqual(99, secHighest.SecondHighest(new int[] { 99, 43, 72, 109, 99, 21, 99 }));
+            Assert.AreEqual(109, secHighest.SecondHighest(new int[] { 109, 43, 72, 109, 54, 109, 99 -74 }));
+
+        }
     }
 }

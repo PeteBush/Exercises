@@ -49,6 +49,7 @@
     <Compile Include="MostFrequentDigit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveNoise.cs" />
+    <Compile Include="SecHighest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
