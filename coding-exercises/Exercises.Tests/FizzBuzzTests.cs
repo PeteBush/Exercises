@@ -118,7 +118,15 @@ namespace Exercises.Tests
             Assert.AreEqual(99, secHighest.SecondHighest(new int[] { 99, 43, 72, 109, 54, 21, -74 }));
             Assert.AreEqual(99, secHighest.SecondHighest(new int[] { 99, 43, 72, 109, 99, 21, 99 }));
             Assert.AreEqual(109, secHighest.SecondHighest(new int[] { 109, 43, 72, 109, 54, 109, 99 -74 }));
+        }
+        [TestMethod]
+        public void FindSmallestInt()
+        {
+            //Arrange
+            Lowest lowest = new Lowest();
 
+            //Assert
+            Assert.AreEqual(11, lowest.FindLowestInt(new int[] { 34, 190, 3890, 11, 23, 76 }));
         }
     }
 }
