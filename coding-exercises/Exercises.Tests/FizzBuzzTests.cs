@@ -100,8 +100,8 @@ namespace Exercises.Tests
 
             //Assert
             Assert.AreEqual(0, highOdd.HighestOdd(new int[] { }));
-            Assert.AreEqual(0, highOdd.HighestOdd(new int[] {2, 10}));
-            Assert.AreEqual(7, highOdd.HighestOdd(new int[] {3,7,8}));
+            Assert.AreEqual(0, highOdd.HighestOdd(new int[] { 2, 10 }));
+            Assert.AreEqual(7, highOdd.HighestOdd(new int[] { 3, 7, 8 }));
         }
         [TestMethod]
         public void SecondHighest()
@@ -112,12 +112,12 @@ namespace Exercises.Tests
             //Assert
             Assert.AreEqual(0, secHighest.SecondHighest(new int[] { }));
             Assert.AreEqual(1, secHighest.SecondHighest(new int[] { 1 }));
-            Assert.AreEqual(3, secHighest.SecondHighest(new int[] { 1, 3, 5}));
+            Assert.AreEqual(3, secHighest.SecondHighest(new int[] { 1, 3, 5 }));
             Assert.AreEqual(3, secHighest.SecondHighest(new int[] { 1, 3, 3, 3 }));
             Assert.AreEqual(13, secHighest.SecondHighest(new int[] { 1, 4, 6, 8, 23, 13 }));
             Assert.AreEqual(99, secHighest.SecondHighest(new int[] { 99, 43, 72, 109, 54, 21, -74 }));
             Assert.AreEqual(99, secHighest.SecondHighest(new int[] { 99, 43, 72, 109, 99, 21, 99 }));
-            Assert.AreEqual(109, secHighest.SecondHighest(new int[] { 109, 43, 72, 109, 54, 109, 99 -74 }));
+            Assert.AreEqual(109, secHighest.SecondHighest(new int[] { 109, 43, 72, 109, 54, 109, 99 - 74 }));
         }
         [TestMethod]
         public void FindSmallestInt()
@@ -128,5 +128,15 @@ namespace Exercises.Tests
             //Assert
             Assert.AreEqual(11, lowest.FindLowestInt(new int[] { 34, 190, 3890, 11, 23, 76 }));
         }
+        [TestMethod]
+        public void AlternatingCase()
+        {
+            //Arrange
+            AltCase altCase = new AltCase();
+
+            //Assert
+            Assert.AreEqual("hello world", altCase.ToAlternatingCase("HELLO WORLD"));
+        }
+
     }
 }
