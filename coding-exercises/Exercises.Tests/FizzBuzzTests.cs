@@ -137,6 +137,17 @@ namespace Exercises.Tests
             //Assert
             Assert.AreEqual("hello world", altCase.ToAlternatingCase("HELLO WORLD"));
         }
+        [TestMethod]
+        public void Palindrome()
+        {
+            // Arrange
+            Palindrome palindrome = new Palindrome();
+
+            //Assert
+            Assert.AreEqual(4, palindrome.palindromeChainLength(87));
+
+
+        }
 
     }
 }
