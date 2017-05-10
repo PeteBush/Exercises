@@ -25,11 +25,8 @@ namespace Exercises
                 nString = sum.ToString();
                 charArray = nString.ToCharArray();
                 Array.Reverse(charArray);
-                reverseString = new string(charArray);
-                
-
+                reverseString = new string(charArray);               
             }
-
             return count;
         }
     }

@@ -146,6 +146,18 @@ namespace Exercises.Tests
             //Assert
             Assert.AreEqual(4, palindrome.palindromeChainLength(87));
 
+        }
+        [TestMethod]
+        public void Survivor()
+        {
+            //Arrange
+            Survivor survivor = new Survivor();
+
+            //Assert
+            Assert.AreEqual(4, survivor.JosSurvivor(7, 3));
+            Assert.AreEqual(28, survivor.JosSurvivor(40, 3));
+            Assert.AreEqual(265, survivor.JosSurvivor(300, 300));
+            Assert.AreEqual(10, survivor.JosSurvivor(11, 19));
 
         }
 
