@@ -160,6 +160,19 @@ namespace Exercises.Tests
             Assert.AreEqual(10, survivor.JosSurvivor(11, 19));
 
         }
+        [TestMethod]
+        public void EqualSides()
+        {
+            //Arrange
+            EqualSides equalSides = new EqualSides();
+
+            //Assert
+            Assert.AreEqual(2, equalSides.EqualSidesOfAnArray(new int[] { 1, 2, 1, 2, 1 }));
+            Assert.AreEqual(1, equalSides.EqualSidesOfAnArray(new int[] { 21, 1, 12, 8, 1 }));
+            Assert.AreEqual(3, equalSides.EqualSidesOfAnArray(new int[] { 99, -9, 10, 2, 100 }));
+        }
+          
+            
 
     }
 }

@@ -44,6 +44,7 @@
     <Compile Include="Arrival.cs" />
     <Compile Include="DriversLicense.cs" />
     <Compile Include="ECheck.cs" />
+    <Compile Include="EqualSides.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="HighAndLow.cs" />
     <Compile Include="HighOdd.cs" />
