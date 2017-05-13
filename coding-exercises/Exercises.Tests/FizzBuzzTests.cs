@@ -136,6 +136,8 @@ namespace Exercises.Tests
 
             //Assert
             Assert.AreEqual("hello world", altCase.ToAlternatingCase("HELLO WORLD"));
+            Assert.AreEqual("HELLO WORLD", altCase.ToAlternatingCase("hello world"));
+            Assert.AreEqual("hElLo WoRlD", altCase.ToAlternatingCase("HeLlO wOrLd"));
         }
         [TestMethod]
         public void Palindrome()
@@ -187,6 +189,17 @@ namespace Exercises.Tests
             Assert.AreEqual("Helo", removeRepeating.Remove("Hello"));
         }
             
+        [TestMethod]
+        public void UniqueOnly()
+        {
+            //Arrange
+            UniqueOnly uniqueOnly = new UniqueOnly();
+
+            int[] array = new int[] { 1, 2, 4, 5, 6, 3 };
+
+            //Assert
+            CollectionAssert.AreEqual(array, uniqueOnly.RemoveDuplicates(new int[] { 1,2,1,4,4,1,2,5,6,3}));
+        }
 
     }
 }

@@ -57,6 +57,7 @@
     <Compile Include="RemoveRepeating.cs" />
     <Compile Include="SecHighest.cs" />
     <Compile Include="Survivor.cs" />
+    <Compile Include="UniqueOnly.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

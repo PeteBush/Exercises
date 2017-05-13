@@ -24,7 +24,7 @@ namespace Exercises
                 checker = input[i];
                 
             }
-            returnString += input[input.Length - 1];
+            returnString += checker;
             return returnString;
         }
     }
