@@ -172,6 +172,20 @@ namespace Exercises.Tests
             Assert.AreEqual(3, equalSides.EqualSidesOfAnArray(new int[] { 99, -9, 10, 2, 100 }));
         }
           
+
+        [TestMethod]
+        public void RemoveRepeats()
+        {
+            //Arrange
+            RemoveRepeating removeRepeating = new RemoveRepeating();
+
+            //Assert
+            Assert.AreEqual("ABCDAB", removeRepeating.Remove("AAAABBBCCDAABBB"));
+            Assert.AreEqual("ABCDAB", removeRepeating.Remove("AAAABBBCCDAAB"));
+            Assert.AreEqual("ABCDA", removeRepeating.Remove("AAAABBBCCDAA"));
+            Assert.AreEqual("ABCDAz", removeRepeating.Remove("AAAABBBCCDAAz"));
+            Assert.AreEqual("Helo", removeRepeating.Remove("Hello"));
+        }
             
 
     }

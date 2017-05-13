@@ -45,6 +45,7 @@
     <Compile Include="DriversLicense.cs" />
     <Compile Include="ECheck.cs" />
     <Compile Include="EqualSides.cs" />
+    <Compile Include="Factorial.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="HighAndLow.cs" />
     <Compile Include="HighOdd.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Palindrome.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveNoise.cs" />
+    <Compile Include="RemoveRepeating.cs" />
     <Compile Include="SecHighest.cs" />
     <Compile Include="Survivor.cs" />
   </ItemGroup>
