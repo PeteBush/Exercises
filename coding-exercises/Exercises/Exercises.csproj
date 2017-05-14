@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AltCase.cs" />
     <Compile Include="Arrival.cs" />
+    <Compile Include="CountDuplicates.cs" />
     <Compile Include="DriversLicense.cs" />
     <Compile Include="ECheck.cs" />
     <Compile Include="EqualSides.cs" />

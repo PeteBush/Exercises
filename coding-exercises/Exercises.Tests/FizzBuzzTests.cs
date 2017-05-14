@@ -195,11 +195,24 @@ namespace Exercises.Tests
             //Arrange
             UniqueOnly uniqueOnly = new UniqueOnly();
 
-            int[] array = new int[] { 1, 2, 4, 5, 6, 3 };
+           
 
             //Assert
-            CollectionAssert.AreEqual(array, uniqueOnly.RemoveDuplicates(new int[] { 1,2,1,4,4,1,2,5,6,3}));
+            CollectionAssert.AreEqual(new int[] { 1, 2, 3, 4, 5, 6 }, uniqueOnly.RemoveDuplicates(new int[] { 1,2,1,4,4,1,2,5,6,3}));
         }
+        [TestMethod]
+        public void CountDuplicates()
+        {
+            //Arrange
+            CountDuplicates countDuplicates = new CountDuplicates();
 
+            //Assert
+            Assert.AreEqual(2, countDuplicates.Count("aabbcde"));
+            Assert.AreEqual(2, countDuplicates.Count("aabbcdeB"));
+            Assert.AreEqual(0, countDuplicates.Count("abcde"));
+            Assert.AreEqual(1, countDuplicates.Count("indivisibility"));
+        
+
+        }
     }
 }
