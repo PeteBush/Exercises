@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace Exercises.Tests
 {
@@ -173,7 +175,7 @@ namespace Exercises.Tests
             Assert.AreEqual(1, equalSides.EqualSidesOfAnArray(new int[] { 21, 1, 12, 8, 1 }));
             Assert.AreEqual(3, equalSides.EqualSidesOfAnArray(new int[] { 99, -9, 10, 2, 100 }));
         }
-          
+
 
         [TestMethod]
         public void RemoveRepeats()
@@ -188,17 +190,17 @@ namespace Exercises.Tests
             Assert.AreEqual("ABCDAz", removeRepeating.Remove("AAAABBBCCDAAz"));
             Assert.AreEqual("Helo", removeRepeating.Remove("Hello"));
         }
-            
+
         [TestMethod]
         public void UniqueOnly()
         {
             //Arrange
             UniqueOnly uniqueOnly = new UniqueOnly();
 
-           
+
 
             //Assert
-            CollectionAssert.AreEqual(new int[] { 1, 2, 3, 4, 5, 6 }, uniqueOnly.RemoveDuplicates(new int[] { 1,2,1,4,4,1,2,5,6,3}));
+            CollectionAssert.AreEqual(new int[] { 1, 2, 3, 4, 5, 6 }, uniqueOnly.RemoveDuplicates(new int[] { 1, 2, 1, 4, 4, 1, 2, 5, 6, 3 }));
         }
         [TestMethod]
         public void CountDuplicates()
@@ -211,7 +213,52 @@ namespace Exercises.Tests
             Assert.AreEqual(2, countDuplicates.Count("aabbcdeB"));
             Assert.AreEqual(0, countDuplicates.Count("abcde"));
             Assert.AreEqual(1, countDuplicates.Count("indivisibility"));
-        
+        }
+        [TestMethod]
+        public void IntCount()
+        {
+
+            CountInt intCount = new CountInt();
+            Dictionary<int, int> expected = new Dictionary<int, int>()
+            {
+                {1, 2 },
+                {44, 1 },
+                {55, 1 },
+                {63, 3 },
+                {77, 1 },
+                {99, 2 }
+            };
+
+            CollectionAssert.AreEqual(expected, intCount.IntCount(new int[] { 1, 99, 63, 1, 55, 77, 63, 99, 63, 44 }));
+        }
+        [TestMethod]
+        public void ConsolidateInventory()
+        {
+            Dictionary<string, int> expected = new Dictionary<string, int>()
+            {
+                {"SKU1", 100 },
+                {"SKU2", 64 },
+                {"SKU3", 44 },
+                {"SKU4", 5 }
+            };
+
+            Exercises exercises = new Exercises();
+            Dictionary<string, int> actual = exercises.ConsolidateInventory(
+
+                new Dictionary<string, int>()
+                {
+                    {"SKU1", 100 },
+                    {"SKU2", 53 },
+                    {"SKU3", 44 }
+                },
+
+                new Dictionary<string, int>()
+                {
+                    {"SKU2", 11 },
+                    {"SKU4", 5 },
+                });
+
+            CollectionAssert.AreEquivalent(expected, actual);
 
         }
     }
