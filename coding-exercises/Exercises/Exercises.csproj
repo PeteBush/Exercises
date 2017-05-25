@@ -55,6 +55,7 @@
     <Compile Include="Lowest.cs" />
     <Compile Include="MostFrequentDigit.cs" />
     <Compile Include="Palindrome.cs" />
+    <Compile Include="PaulCipher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveNoise.cs" />
     <Compile Include="RemoveRepeating.cs" />

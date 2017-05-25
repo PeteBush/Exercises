@@ -261,5 +261,28 @@ namespace Exercises.Tests
             CollectionAssert.AreEquivalent(expected, actual);
 
         }
+        [TestMethod]
+        public void PaulCipher()
+        {
+            string expected = "HM1QA";
+
+            PaulCipher paulCipher = new PaulCipher();
+
+            Assert.AreEqual(expected, paulCipher.Encode("HE1LO"));
+            Assert.AreEqual("", paulCipher.Encode(""));
+        }
+        [TestMethod]
+        public void PaulCipherDecode()
+        {
+            string expected = "HE1LO";
+
+            PaulCipher paulCipher = new PaulCipher();
+
+            Assert.AreEqual(expected, paulCipher.Decode("HM1QA"));
+            Assert.AreEqual("", paulCipher.Decode(""));
+            Assert.AreEqual("LAZY", paulCipher.Decode("LMAY"));
+            Assert.AreEqual("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.", paulCipher.Decode("TBM VLDLN mTGLK TUM HEHCI HKAW LBM QMAY CSV."));
+            Assert.AreEqual("5DDC4DDF-7A47-44D3-8EDA-3171860DC938", paulCipher.Decode("5DHG4GHJ-7G47-44E3-8IIE-3171860EG938"));
+        }
     }
 }
