@@ -284,5 +284,20 @@ namespace Exercises.Tests
             Assert.AreEqual("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.", paulCipher.Decode("TBM VLDLN mTGLK TUM HEHCI HKAW LBM QMAY CSV."));
             Assert.AreEqual("5DDC4DDF-7A47-44D3-8EDA-3171860DC938", paulCipher.Decode("5DHG4GHJ-7G47-44E3-8IIE-3171860EG938"));
         }
+        [TestMethod]
+        public void SumTwoSmallestNumbersTest()
+        {
+            //Arrange
+            int expected = 7;
+            SumTwoSmallest sumTwoSmallest = new SumTwoSmallest();
+
+            //Act
+            int actual = sumTwoSmallest.SumTwoSmallestNumbers(new int[5] { 19, 5, 42, 2, 77 });
+
+            //Assert
+            Assert.AreEqual(expected, actual); 
+          
+
+        }
     }
 }

@@ -60,6 +60,7 @@
     <Compile Include="RemoveNoise.cs" />
     <Compile Include="RemoveRepeating.cs" />
     <Compile Include="SecHighest.cs" />
+    <Compile Include="SumTwoSmallest.cs" />
     <Compile Include="Survivor.cs" />
     <Compile Include="UniqueOnly.cs" />
   </ItemGroup>
